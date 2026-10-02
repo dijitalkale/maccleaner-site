@@ -1,0 +1,15 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mac Cleaner — E-posta doğrulandı</title><link rel="stylesheet" href="stil.css"></head><body><main>
+<header><div class="logo"><span></span></div><div><h1>Mac Cleaner</h1><div class="soluk">Hesap / Account</div></div></header>
+<div class="kart" id="tamam"><h2 style="margin-top:0">E-posta adresiniz doğrulandı</h2>
+<p>Mac Cleaner'a dönüp <strong>Ayarlar → Hesap → Giriş Yap</strong> ile giriş yapabilirsiniz.</p>
+<p lang="en" class="soluk">Your email address is confirmed. Go back to Mac Cleaner and sign in under Settings → Account.</p></div>
+<div class="kart" id="hata" hidden><h2 style="margin-top:0">Bağlantı geçersiz ya da süresi dolmuş</h2>
+<p>Mac Cleaner'da yeniden hesap oluşturmayı ya da giriş yapmayı deneyin.</p>
+<p lang="en" class="soluk">This link is invalid or has expired. Try creating the account or signing in again in Mac Cleaner.</p></div>
+<script>
+// A failed confirmation comes back with an error in the address.
+if (/error=/.test(location.hash + location.search)) { document.getElementById('tamam').hidden = true; document.getElementById('hata').hidden = false; }
+history.replaceState(null, '', location.pathname);
+</script>
+</main></body></html>
